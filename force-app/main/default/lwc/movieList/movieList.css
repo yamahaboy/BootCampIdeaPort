@@ -1,0 +1,61 @@
+.movie-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.movie-card {
+  width: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-count-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.page-count-field {
+  background-color: #fff;
+  width: 340px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+}
+.page-count-field-info {
+  color: #808080;
+  border: none;
+  padding: 5px;
+  background-color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.page-count-field-info label {
+  color: #808080;
+  font-size: 16px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.prev-button-container {
+  margin-right: 8px;
+}
+.number-button-container {
+  margin-right: 8px;
+}
+
+.number-btn {
+  margin: 3px;
+}

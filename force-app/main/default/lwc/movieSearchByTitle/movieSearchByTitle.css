@@ -1,0 +1,23 @@
+.movie-matcher {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 15px;
+  border: 1px solid #c9c7c5;
+  min-height: 840px;
+  max-height: 840px;
+}
+.scroll-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.scroll-box {
+  max-height: 765px;
+  overflow-y: auto;
+}
+.movie-card {
+  background-color: #e2dede;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,56 @@
+<template>
+    <c-movie-catalog-filter ongenrechange={handleGenreChange}></c-movie-catalog-filter>
+    <template if:true={filteredMovies}>
+        <div class="movie-grid">
+            <template for:each={pagedMovies} for:item="movie">
+                <c-movie-card-component key={movie.Id} movie={movie} class="movie-card"></c-movie-card-component>
+            </template>
+        </div>
+        <div class="page-count-container">
+        <div class="page-count-field">
+            <lightning-input
+                type="number"
+                label="Number of Cards Per Page"
+                value={perPage}
+                onblur={handlePerPageBlur}
+                class="page-count-field-info">
+            </lightning-input>
+        </div>  
+    </div>
+    <div class="pagination">
+        <lightning-layout>
+            <div class="prev-button-container">
+            <lightning-layout-item >
+                <lightning-button
+                    label="Previous"
+                    disabled={isFirstPage}
+                    onclick={handlePrevious}>
+                </lightning-button>
+            </lightning-layout-item>
+        </div>
+        <div class="number-button-container">
+            <lightning-layout-item>
+                <template for:each={getPageNumbers} for:item="pageNumber">
+                    <lightning-button
+                        class="number-btn"
+                        key={pageNumber}
+                        label={pageNumber}
+                        onclick={handlePageNumberClick}
+                        data-page-number={pageNumber}>
+                    </lightning-button>
+                </template>
+            </lightning-layout-item>
+        </div>
+            <div class="next-button-container">
+            <lightning-layout-item>
+                <lightning-button
+                    label="Next"
+                    disabled={isLastPage}
+                    onclick={handleNext}>
+                </lightning-button>
+            </lightning-layout-item>
+        </div>
+        </lightning-layout>   
+    </div> 
+    </template>
+</template>

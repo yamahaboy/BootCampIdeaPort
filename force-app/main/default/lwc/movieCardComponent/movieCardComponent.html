@@ -1,0 +1,30 @@
+<template>
+  <lightning-card>
+    <div class="movie-card">
+      <div class="text-container">
+        <div class="title-btn-container">
+        <template if:true={movie}>
+          <div class="movie-title">{movie.Title__c}</div>
+        </template>
+        <div class="details-button">
+          <lightning-button label="Details" title="Non-primary action" onclick={getDetails} class="slds-m-left_x-small"></lightning-button>
+        </div>
+      </div>
+      <div class="genre-rating-container">
+        <template if:true={movie}>
+          <div class="movie-raiting">Rating: {movie.RaitingCalculated__c}</div>
+          <div class="movie-genre">Genre: {movie.Genre__c}</div>
+          <template if:true={show18Plus}>
+            <div class="age-rating">Age: 18+</div>
+          </template>
+          </template>
+      </div>
+      </div>
+      <div class="parent-container">  
+      <div class="poster-container">
+        <c-movie-preview-for-list movie-id={movie.Id} class="poster-img"> </c-movie-preview-for-list>
+      </div>
+    </div>
+  </div>
+  </lightning-card>
+</template>

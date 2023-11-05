@@ -1,0 +1,20 @@
+.slds-m-around_medium {
+  color: #808080;
+}
+.slds-combobox {
+  color: #808080;
+}
+
+.slds-combobox .slds-form-element__label {
+  color: #808080;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.slds-combobox .slds-form-element__control .slds-input {
+  color: #808080;
+}
+
+.slds-combobox.slds-dropdown__item {
+  color: #808080;
+}
